@@ -1,10 +1,8 @@
 version: '3.3'
 services:
   db:
-    // DBのVERSIONを決める
     image: mysql:5.7
     restart: always
-    // DBのデータをセットアップする
     environment:
       MYSQL_DATABASE: 'db_name'
       MYSQL_ROOT_PASSWORD: 'mysql'
