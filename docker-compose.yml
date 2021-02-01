@@ -18,15 +18,15 @@ volumes:
   my-db:
    driver: local
 
+services:
   node:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: node-js
     volumes:
-      - ./backend_node:/backend_node
+      - ./docker-node/
     ports:
       - 3000:3000
-    working_dir: "/backend_node"    
-    command:
-      sh -c 'npm i && nodemon
+    working_dir: "/docker-node"    
+    command: sh -c 'npm i && nodemon'
