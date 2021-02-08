@@ -2,12 +2,12 @@ FROM node:8-alpine
 
 RUN npm install -g nodemon
 
-RUN mkdir -p /backend_node
-WORKDIR /backend_node
+RUN mkdir -p /docker-node
+WORKDIR /docker-node
 
-COPY backend_node/package*.json ./
+COPY /package*.json ./
 
-COPY backend_node/ .
+COPY / .
 
 RUN npm install
 
